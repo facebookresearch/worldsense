@@ -267,6 +267,10 @@ The basic analysis printed by the `analyse_results.py` script is done by calling
 It is important to call these functions rather than doing a normal `groupby` (or `pivot`) aggregation by yourself: they do a proper equal reweighting before aggregating across `problemsize` and before aggregating across `problemname`. They also correctly compute the corresponding confidence intervals.
 3. [Optionally] call `pivot_pretty` to get a display-friendly pivoted version of the accuracy or bias table obtained in step 2.  `pivot_pretty` allows to choose what to put in rows (index) and columns, and to have each cell contain a nicely formatted string that combines both value and confidence interval (alternative content formatting for each cell is available by specifying a different `cell_style` argument, see documentation of `format_cell` function in `worldsense/analysis.py` for possibilities).
 
+# License
+
+Please see license file for information about usage.
+
 # Citation
 
 ```
