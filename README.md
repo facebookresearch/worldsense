@@ -2,8 +2,8 @@
 
 This is the repository for the data and analysis code of the *WorldSense benchmark* presented in the paper:
 
-**WorldSense: A Synthetic Benchmark for Grounded Reasoning
-in Large Language Models**, Youssef Benchekroun, Megi Dervishi, Mark Ibrahim
+**[WorldSense: A Synthetic Benchmark for Grounded Reasoning
+in Large Language Models](https://arxiv.org/abs/2311.15930)**, Youssef Benchekroun, Megi Dervishi, Mark Ibrahim
 Jean-Baptiste Gaya, Xavier Martinet, Grégoire Mialon, Thomas Scialom,
 Emmanuel Dupoux, Dieuwke Hupkes, Pascal Vincent. November 2023.
 
@@ -266,4 +266,17 @@ The basic analysis printed by the `analyse_results.py` script is done by calling
 2. Call either `accuracy_by_group` to compute a table containing the average accuracy within each group or `bias_by_group` to get the corresponding bias.
 It is important to call these functions rather than doing a normal `groupby` (or `pivot`) aggregation by yourself: they do a proper equal reweighting before aggregating across `problemsize` and before aggregating across `problemname`. They also correctly compute the corresponding confidence intervals.
 3. [Optionally] call `pivot_pretty` to get a display-friendly pivoted version of the accuracy or bias table obtained in step 2.  `pivot_pretty` allows to choose what to put in rows (index) and columns, and to have each cell contain a nicely formatted string that combines both value and confidence interval (alternative content formatting for each cell is available by specifying a different `cell_style` argument, see documentation of `format_cell` function in `worldsense/analysis.py` for possibilities).
+
+# Citation
+
+```
+@article{benchekroun2023worldsense,
+      title={WorldSense: A Synthetic Benchmark for Grounded Reasoning in Large Language Models}, 
+      author={Youssef Benchekroun and Megi Dervishi and Mark Ibrahim and Jean-Baptiste Gaya and Xavier Martinet and Grégoire Mialon and Thomas Scialom and Emmanuel Dupoux and Dieuwke Hupkes and Pascal Vincent},
+      year={2023},
+      eprint={2311.15930},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
+```
 
